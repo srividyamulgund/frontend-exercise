@@ -6,6 +6,11 @@ router.get('/', (req, res) => {
 		meta: req.app.get('meta')
 	});
 });
+router.get('/home', (req, res) => {
+	res.render("home", {
+		meta: req.app.get('meta')
+	});
+});
 router.get('/einstein-and-churchill-both-took-daily-naps', (req, res) => {
 	res.render("article", {
 		article: req.app.get('article')
