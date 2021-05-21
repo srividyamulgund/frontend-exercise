@@ -8,8 +8,8 @@
                 <div class="article-card">
                     <h2 class="article-headline">{{article.post.standfirst}}</h2>
                     <h5 class="article-time"><time>{{toDate article.post.date}}</time></h5>
-                    <div class="fakeimg" style="height:200px;">{{article.post.image}}</div>
-                    <p class="article-paragraph">{{{article.post.body}}}</p>
+                    <div class="fakeimg" style="height:400px;">{{article.post.image}}</div>
+                    <p class="article-paragraph">{{paragraphSplit article.post.body}}</p>
                 </div>
                 <div class="article-card">
                     <hr>

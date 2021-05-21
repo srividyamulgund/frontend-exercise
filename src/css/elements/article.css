@@ -10,8 +10,16 @@
   /* Add a gray background color with some padding */
   .article-body {
     box-sizing: border-box;
-    font-family: Arial;
+    font-family: 'PT sans',sans-serif;
+    font-size: 1.2em;
     padding: 20px;
+  }
+  .article_paragraph {
+    font-family: 'PT sans',sans-serif;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin-top: 10px;
+    margin-bottom: 40px;
   }
   
   /* Create two unequal columns that floats next to each other */

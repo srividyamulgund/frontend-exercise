@@ -29,6 +29,17 @@ hbs.handlebars.registerHelper('toDate', function (string) {
     return new Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeStyle: 'short' }).format(date);
 });
 
+hbs.handlebars.registerHelper('paragraphSplit', function (plaintext) {
+    var i, output = '',
+        lines = plaintext.split(/\r\n|\r|\n/g);
+    for (i = 0; i < lines.length; i++) {
+        if (lines[i]) {
+            output += '<p class="article_paragraph">' + lines[i] + '</p>';
+        }
+    }
+    return new hbs.handlebars.SafeString(output);
+});
+
 app.use('*/static', express.static('public'));
 
 app.use(router);
