@@ -3,11 +3,13 @@
  * structure and assoiciated test
  * @param {Object} params - containing:
  * @param {String} homePagePath - the pathname of the homepage (defaults to '/')
+ * @param {String} articlePage
  */
 class Utils {
 	constructor(params) {
 		this.params = Object.assign({
-			homePagePath: '/'
+			homePagePath: '/',
+			articlePage: '/einstein-and-churchill-both-took-daily-naps',
 		}, params);
 	}
 
@@ -17,6 +19,13 @@ class Utils {
 	 */
 	isHomePage() {
 		return document.location.pathname === this.params.homePagePath;
+	}
+	/**
+	 * Is the user on the article
+	 * @return {Boolean}
+	 */
+	isArticlePage() {
+		return document.location.pathname === this.params.articlePage;
 	}
 }
 

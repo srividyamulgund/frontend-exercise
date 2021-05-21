@@ -9,6 +9,7 @@ const posts = require("./content/posts.json");
 const comments = require("../db.json");
 
 app.engine('handlebars', exphbs());
+app.set('views', './views');
 app.set('view engine', 'handlebars');
 app.set('meta', meta);
 app.set('article', article);
