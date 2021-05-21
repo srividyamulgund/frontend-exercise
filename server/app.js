@@ -24,6 +24,10 @@ hbs.handlebars.registerHelper("list", function (posts, options) {
     return "<ul>\n" + itemsAsHtml.join("\n") + "\n</ul>";
 });
 
+hbs.handlebars.registerHelper('toDate', function (string) {
+    const date = new Date(string);
+    return new Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeStyle: 'short' }).format(date);
+});
 
 app.use('*/static', express.static('public'));
 

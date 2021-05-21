@@ -7,7 +7,7 @@
                 </div>
                 <div class="article-card">
                     <h2 class="article-headline">{{article.post.standfirst}}</h2>
-                    <h5 class="article-time"><time>{{ article.post.date}}</time></h5>
+                    <h5 class="article-time"><time>{{toDate article.post.date}}</time></h5>
                     <div class="fakeimg" style="height:200px;">{{article.post.image}}</div>
                     <p class="article-paragraph">{{{article.post.body}}}</p>
                 </div>
@@ -26,7 +26,7 @@
                             {{#each comments.comments}}
                             <li>
                                 <div>
-                                    <h5 class="stories_list_child">{{this.name}} {{ this.date}}
+                                    <h5 class="stories_list_child">{{this.name}} {{toDate this.date}}
                                         <pre> {{this.likes}}</h5><br>
                                 <p>{{this.body}}</p>
                                 </div>
