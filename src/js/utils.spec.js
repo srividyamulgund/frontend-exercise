@@ -1,9 +1,9 @@
 const Utils = require("./utils");
 
-describe( 'Utils', () => {
-	describe( 'isHomePage', () => {
+describe('Utils', () => {
+	describe('isHomePage', () => {
 		it("should match if on homepage", () => {
-			const utils = new Utils();
+			const utils = new Utils('/');
 			window.history.pushState({}, "", "/");
 			expect(utils.isHomePage()).toBeTruthy();
 		});
@@ -16,8 +16,8 @@ describe( 'Utils', () => {
 
 		it("should match if on homepage and has hash navigation", () => {
 			const utils = new Utils();
-			window.history.pushState({}, "", "/#foo");
-			expect(utils.isHomePage()).toBeTruthy();
+			window.history.pushState({}, "", "/einstein-and-churchill-both-took-daily-naps");
+			expect(utils.isArticlePage()).toBeTruthy();
 		});
 
 		it("should not match if on another page", () => {
