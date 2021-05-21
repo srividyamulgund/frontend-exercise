@@ -16,6 +16,15 @@ app.set('article', article);
 app.set('posts', posts);
 app.set('comments', comments);
 
+let hbs = exphbs.create({});
+
+hbs.handlebars.registerHelper("list", function (posts, options) {
+    const filteredPosts = posts.filter(post => post.category === 3);
+    const itemsAsHtml = filteredPosts.map(post => "<li> <div class=\"row_title\"> <img src=\" \" width=\"102\" height=\"68\" alt=\"\"><br><p>" + options.fn(post) + "</p> </div><a href=\"#\">Read more</a></li>");
+    return "<ul>\n" + itemsAsHtml.join("\n") + "\n</ul>";
+});
+
+
 app.use('*/static', express.static('public'));
 
 app.use(router);

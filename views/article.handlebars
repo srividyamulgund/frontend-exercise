@@ -1,1 +1,55 @@
-<h1>Hello World</h1>
+<div class="article">
+    <div class="article-body">
+        <div class="article-row">
+            <div class="article-leftcolumn">
+                <div class="article-header">
+                    <h1 class="article-title">{{article.post.title}}</h1>
+                </div>
+                <div class="article-card">
+                    <h2 class="article-headline">{{article.post.standfirst}}</h2>
+                    <h5 class="article-time"><time>{{ article.post.date}}</time></h5>
+                    <div class="fakeimg" style="height:200px;">{{article.post.image}}</div>
+                    <p class="article-paragraph">{{{article.post.body}}}</p>
+                </div>
+                <div class="article-card">
+                    <hr>
+                    <div class="article-comments-card">
+                        <h3 class="article-comments">{{comments.comments.length}} Comments</h3>
+                        <h3 class="article-comments">Sort:
+                            <a href="#" onclick="">Likes</a>
+                            <a href="#" onclick="">Newest</a>
+                        </h3>
+                    </div>
+                    <hr>
+                    <div class="comments-container">
+                        <ul class="stories_list">
+                            {{#each comments.comments}}
+                            <li>
+                                <div>
+                                    <h5 class="stories_list_child">{{this.name}} {{ this.date}}
+                                        <pre> {{this.likes}}</h5><br>
+                                <p>{{this.body}}</p>
+                                </div>
+                            </li>
+                            <hr>
+                            {{/each}}
+                        </ul>
+                    </div>
+
+                </div> 
+            </div>
+            <div class="article-rightcolumn">
+                <div class="article-card">
+                    <h3 class="article-posts">More Stories</h3>
+                    <div class="container-sb">
+                        <div class="row-sb">
+                            <div class="sidebar">
+                                {{#list posts.posts}}{{title}} {{/list}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

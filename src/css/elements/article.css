@@ -1,0 +1,158 @@
+::selection {
+    background: #ffffff;
+    color: #E6E6E6;
+  }
+  
+  * {
+    box-sizing: inherit;
+  } 
+  
+  /* Add a gray background color with some padding */
+  .article-body {
+    box-sizing: border-box;
+    font-family: Arial;
+    padding: 20px;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .article-leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .article-rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  .article-headline{
+    font-family: 'PT sans',sans-serif;
+    font-size: 2em;
+    line-height: 1em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .article-time{
+    text-align: center;
+    font-family: 'PT sans',sans-serif;
+    /* border-top: 3px solid #333;
+    border-bottom: 3px solid #333; */
+    font-size: 1em;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* Header/Blog Title */
+  .article-header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'PT sans', sans-serif;
+    text-transform: uppercase;
+    line-height: 1em;
+    font-weight: 100;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 32px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 80%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .article-card {
+     padding: 20px;
+     margin-top: 20px;
+  }
+  
+  .container-sb{
+    margin: 0 auto;
+  
+  }
+  .row-sb{
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .row_title{
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: space-around;
+  }
+  
+  .sidebar{
+    width: 100%;
+    background: white;
+  }
+  .sidebar ul{
+    list-style-type: none;
+    padding: 15px;
+  }
+  .sidebar ul li{
+    border-bottom: 1px solid #eee;
+  }
+  .sidebar ul li:last-child{
+    border-bottom: none;
+  }
+  .sidebar ul li a{
+    display: -ms-flexbox;
+    display: flex;
+    align-items: auto;
+    padding: 15px 0;
+  }
+  .sidebar ul li a:hover{
+    background: #f1f1f1;
+    transition: 1s ;
+    -moz-transition:1s ;
+    -ms-transition: 1s ;
+    -o-transition: 1s ;
+    -webkit-transition: 1s ;
+  }
+  .sidebar ul li img{
+    border-radius: 5px;
+    border:1px solid #eee;
+    padding:1px;
+    margin-left: 15px;
+  }
+  .sidebar ul li p{
+    padding:0 10px;
+  }
+  
+  .article-comments-card{
+    display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  height: 20px;
+  }
+  
+  .article-comments{
+    width: 40%;
+  }
+  
+  .stories_list_child{
+    display: flex;
+    align-items: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .article-leftcolumn, .article-rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }

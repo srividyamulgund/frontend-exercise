@@ -1,3 +1,7 @@
+*{
+	box-sizing: inherit;
+} 
+
 .site-logo {
 	height: 48px;
 	padding: 2rem 1rem;
