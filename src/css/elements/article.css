@@ -149,6 +149,11 @@
   .article-comments{
     width: 40%;
   }
+
+  .comments{
+    display: flex;
+    flex-wrap: wrap;
+  }
   
   .stories_list_child{
     display: flex;
